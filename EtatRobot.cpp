@@ -1,39 +1,51 @@
 #include "EtatRobot.h"
-#include "ExceptionRobot.h"
-#include "EtatAVide.h"
 
-EtatRobot* EtatRobot::avancer() {
-	throw ExceptionRobot::Avancer_Exception();
+EtatRobot EtatRobot::avancer() {
+	// TODO - implement EtatRobot::avancer
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::tourner() {
-	throw ExceptionRobot::Tourner_Exception();
+EtatRobot EtatRobot::tourner() {
+	// TODO - implement EtatRobot::tourner
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::saisir() {
-	throw ExceptionRobot::Saisir_Exception();
+EtatRobot EtatRobot::saisir() {
+	// TODO - implement EtatRobot::saisir
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::poser() {
-	throw ExceptionRobot::Poser_Exception();
+EtatRobot EtatRobot::poser() {
+	// TODO - implement EtatRobot::poser
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::peser() {
-	throw ExceptionRobot::Peser_Exception();
+EtatRobot EtatRobot::peser() {
+	// TODO - implement EtatRobot::peser
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::rencontrerPlot() {
-	throw ExceptionRobot::RencontrerPlot_Exception();
+EtatRobot EtatRobot::rencontrerPlot() {
+	// TODO - implement EtatRobot::rencontrerPlot
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::evaluerPlot() {
-	throw ExceptionRobot::EvaluerPlot_Exception();
+EtatRobot EtatRobot::evaluerPlot() {
+	// TODO - implement EtatRobot::evaluerPlot
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::figer() {
-	throw ExceptionRobot::Figer_Exception();
+EtatRobot EtatRobot::figer() {
+	// TODO - implement EtatRobot::figer
+	throw "Not yet implemented";
 }
 
-EtatRobot* EtatRobot::repartir() {
-	throw ExceptionRobot::Repartir_Exception();
+EtatRobot EtatRobot::repartir() {
+	// TODO - implement EtatRobot::repartir
+	throw "Not yet implemented";
+}
+
+String EtatRobot::getNom() {
+	// TODO - implement EtatRobot::getNom
+	throw "Not yet implemented";
 }
