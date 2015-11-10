@@ -1,8 +1,6 @@
 #include "EtatAVide.h"
 
 EtatRobot EtatAVide::avancer() {
-	// TODO - implement EtatAVide::avancer
-	throw "Not yet implemented";
 }
 
 EtatRobot EtatAVide::rencontrerPlot() {
