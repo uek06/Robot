@@ -4,15 +4,15 @@
 
 EtatAVideFacePlot* EtatAVideFacePlot::inst = new EtatAVideFacePlot;
 
-EtatRobot EtatAVideFacePlot::tourner() {
+EtatRobot* EtatAVideFacePlot::tourner() {
 	return EtatAVide::getSingleton();
 }
 
-EtatRobot EtatAVideFacePlot::saisir() {
+EtatRobot* EtatAVideFacePlot::saisir() {
 	return EtatEnChargeFacePlot::getSingleton();
 }
 
-EtatRobot EtatAVideFacePlot::evaluerPlot() {
+EtatRobot* EtatAVideFacePlot::evaluerPlot() {
 	return this;
 }
 
@@ -20,6 +20,6 @@ String EtatAVideFacePlot::getNom() {
 	return "Etat à vide face à un plot";
 }
 
-EtatAVideFacePlot EtatAVideFacePlot::getSingleton() {
+EtatAVideFacePlot* EtatAVideFacePlot::getSingleton() {
 	return inst;
 }

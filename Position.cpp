@@ -1,6 +1,6 @@
 #include "Position.h"
 
-void Position::getX() {
+int Position::getX() {
 	return this->x;
 }
 
@@ -8,7 +8,7 @@ void Position::setX(int x) {
 	this->x = x;
 }
 
-void Position::getY() {
+int Position::getY() {
 	return this->y;
 }
 

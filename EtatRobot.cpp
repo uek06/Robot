@@ -1,4 +1,6 @@
 #include "EtatRobot.h"
+#include "RobotExceptions.h"
+#include "EtatAVide.h"
 
 EtatRobot* EtatRobot::premierEtat = EtatAVide::getSingleton();
 

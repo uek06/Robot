@@ -10,7 +10,7 @@ String EtatFige::getNom() {
 	return "Etat figé";
 }
 
-EtatFige EtatFige::getSingleton() {
+EtatFige* EtatFige::getSingleton() {
 	return inst;
 }
 

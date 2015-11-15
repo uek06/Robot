@@ -1,12 +1,13 @@
 #include "EtatAVide.h"
+#include "EtatAVideFacePlot.h"
 
 EtatAVide* EtatAVide::inst = new EtatAVide;
 
-EtatRobot EtatAVide::avancer() {
+EtatRobot* EtatAVide::avancer() {
 	return this;
 }
 
-EtatRobot EtatAVide::rencontrerPlot() {
+EtatRobot* EtatAVide::rencontrerPlot() {
 	return EtatAVideFacePlot::getSingleton();
 }
 
@@ -14,6 +15,6 @@ String EtatAVide::getNom() {
 	return "Etat à vide";
 }
 
-EtatAVide EtatAVide::getSingleton() {
+EtatAVide* EtatAVide::getSingleton() {
 	return inst;
 }

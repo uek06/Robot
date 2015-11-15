@@ -4,15 +4,15 @@
 
 EtatEnChargeFacePlot* EtatEnChargeFacePlot::inst = new EtatEnChargeFacePlot;s
 
-EtatRobot EtatEnChargeFacePlot::tourner() {
+EtatRobot* EtatEnChargeFacePlot::tourner() {
 	return EtatEnCharge::getSingleton();
 }
 
-EtatRobot EtatEnChargeFacePlot::peser() {
+EtatRobot* EtatEnChargeFacePlot::peser() {
 	return this;
 }
 
-EtatRobot EtatEnChargeFacePlot::poser() {
+EtatRobot* EtatEnChargeFacePlot::poser() {
 	return EtatAVideFacePlot::getSingleton();
 }
 
@@ -20,6 +20,6 @@ String EtatEnChargeFacePlot::getNom() {
 	return "Etat en charge face à un plot";
 }
 
-EtatEnChargeFacePlot EtatEnChargeFacePlot::getSingleton() {
+EtatEnChargeFacePlot* EtatEnChargeFacePlot::getSingleton() {
 	return inst;
 }
