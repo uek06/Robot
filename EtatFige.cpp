@@ -1,16 +1,19 @@
 #include "EtatFige.h"
 
+EtatFige* EtatFige::inst = new EtatFige;
+
 EtatRobot EtatFige::repartir() {
-	// TODO - implement EtatFige::repartir
-	throw "Not yet implemented";
+	return reinterpret_cast<EtatRobot*>(etatPrecedent);
 }
 
 String EtatFige::getNom() {
-	// TODO - implement EtatFige::getNom
-	throw "Not yet implemented";
+	return "Etat figé";
 }
 
 EtatFige EtatFige::getSingleton() {
-	// TODO - implement EtatFige::getSingleton
-	throw "Not yet implemented";
+	return inst;
+}
+
+void EtatFige::setEtatPrecedent(EtatEnRoute* etat){
+	etatPrecedent = etat;
 }

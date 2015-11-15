@@ -1,15 +1,28 @@
+#ifndef POSITION_H_
+#define POSITION_H_
+
+#include <string>
+#include <ostream>
+using namespace std;
+
 class Position {
 
 private:
-	int int_x;
-	int int_y;
+	int x;
+	int y;
 
 public:
-	void getX();
+	Position(int abscisse = 0, int ordonnee = 0): x(abscisse),y(ordonnee){}
+	
+	int getX();
 
-	void setX(int int_x);
+	void setX(int x);
 
-	void getY();
+	int getY();
 
-	void setY(int int_y);
+	void setY(int y);
+
+	friend ostream& operator<<(ostream&,const Position&);
 };
+
+#endif

@@ -1,26 +1,25 @@
 #include "EtatEnChargeFacePlot.h"
+#include "EtatAVideFacePlot.h"
+#include "EtatEnCharge.h"
+
+EtatEnChargeFacePlot* EtatEnChargeFacePlot::inst = new EtatEnChargeFacePlot;s
 
 EtatRobot EtatEnChargeFacePlot::tourner() {
-	// TODO - implement EtatEnChargeFacePlot::tourner
-	throw "Not yet implemented";
+	return EtatEnCharge::getSingleton();
 }
 
 EtatRobot EtatEnChargeFacePlot::peser() {
-	// TODO - implement EtatEnChargeFacePlot::peser
-	throw "Not yet implemented";
+	return this;
 }
 
 EtatRobot EtatEnChargeFacePlot::poser() {
-	// TODO - implement EtatEnChargeFacePlot::poser
-	throw "Not yet implemented";
+	return EtatAVideFacePlot::getSingleton();
 }
 
 String EtatEnChargeFacePlot::getNom() {
-	// TODO - implement EtatEnChargeFacePlot::getNom
-	throw "Not yet implemented";
+	return "Etat en charge face à un plot";
 }
 
 EtatEnChargeFacePlot EtatEnChargeFacePlot::getSingleton() {
-	// TODO - implement EtatEnChargeFacePlot::getSingleton
-	throw "Not yet implemented";
+	return inst;
 }

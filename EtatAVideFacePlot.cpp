@@ -1,26 +1,25 @@
 #include "EtatAVideFacePlot.h"
+#include "EtatAVide.h"
+#include "EtatEnChargeFacePlot.h"
+
+EtatAVideFacePlot* EtatAVideFacePlot::inst = new EtatAVideFacePlot;
 
 EtatRobot EtatAVideFacePlot::tourner() {
-	// TODO - implement EtatAVideFacePlot::tourner
-	throw "Not yet implemented";
+	return EtatAVide::getSingleton();
 }
 
 EtatRobot EtatAVideFacePlot::saisir() {
-	// TODO - implement EtatAVideFacePlot::saisir
-	throw "Not yet implemented";
+	return EtatEnChargeFacePlot::getSingleton();
 }
 
 EtatRobot EtatAVideFacePlot::evaluerPlot() {
-	// TODO - implement EtatAVideFacePlot::evaluerPlot
-	throw "Not yet implemented";
+	return this;
 }
 
 String EtatAVideFacePlot::getNom() {
-	// TODO - implement EtatAVideFacePlot::getNom
-	throw "Not yet implemented";
+	return "Etat à vide face à un plot";
 }
 
 EtatAVideFacePlot EtatAVideFacePlot::getSingleton() {
-	// TODO - implement EtatAVideFacePlot::getSingleton
-	throw "Not yet implemented";
+	return inst;
 }

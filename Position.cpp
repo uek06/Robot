@@ -1,21 +1,21 @@
 #include "Position.h"
 
 void Position::getX() {
-	// TODO - implement Position::getX
-	throw "Not yet implemented";
+	return this->x;
 }
 
-void Position::setX(int int_x) {
-	// TODO - implement Position::setX
-	throw "Not yet implemented";
+void Position::setX(int x) {
+	this->x = x;
 }
 
 void Position::getY() {
-	// TODO - implement Position::getY
-	throw "Not yet implemented";
+	return this->y;
 }
 
-void Position::setY(int int_y) {
-	// TODO - implement Position::setY
-	throw "Not yet implemented";
+void Position::setY(int y) {
+	this->y=y;
+}
+
+ostream& operator<<(ostream& os, Position& pos){
+	return os << "Position: (" << pos.x << ";" << pos.y << ")" << endl;
 }

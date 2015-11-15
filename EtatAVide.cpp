@@ -1,19 +1,19 @@
 #include "EtatAVide.h"
 
+EtatAVide* EtatAVide::inst = new EtatAVide;
+
 EtatRobot EtatAVide::avancer() {
+	return this;
 }
 
 EtatRobot EtatAVide::rencontrerPlot() {
-	// TODO - implement EtatAVide::rencontrerPlot
-	throw "Not yet implemented";
+	return EtatAVideFacePlot::getSingleton();
 }
 
 String EtatAVide::getNom() {
-	// TODO - implement EtatAVide::getNom
-	throw "Not yet implemented";
+	return "Etat à vide";
 }
 
 EtatAVide EtatAVide::getSingleton() {
-	// TODO - implement EtatAVide::getSingleton
-	throw "Not yet implemented";
+	return inst;
 }

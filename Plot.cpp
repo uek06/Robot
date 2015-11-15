@@ -1,11 +1,14 @@
 #include "Plot.h"
 
 void Plot::getHauteur() {
-	// TODO - implement Plot::getHauteur
-	throw "Not yet implemented";
+	return this->hauteur;
 }
 
-void Plot::setHauteur(int int_hauteur) {
-	// TODO - implement Plot::setHauteur
-	throw "Not yet implemented";
+ostream& operator<<(ostream& os, const Plot& pl) {
+	if(pl.hauteur == 0){
+		return os << "Le robot n'est pas devant un plot" << endl;
+	}
+	else{
+		return os << "Hauteur du plot: " << pl.hauteur << endl;
+	}
 }

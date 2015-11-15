@@ -1,51 +1,51 @@
 #include "EtatRobot.h"
 
-EtatRobot EtatRobot::avancer() {
-	// TODO - implement EtatRobot::avancer
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::premierEtat = EtatAVide::getSingleton();
+
+EtatRobot* EtatRobot::avancer() {
+	throw RobotExceptions::Avancer_Exception();
 }
 
-EtatRobot EtatRobot::tourner() {
-	// TODO - implement EtatRobot::tourner
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::tourner() {
+	throw RobotExceptions::Tourner_Exception();
 }
 
-EtatRobot EtatRobot::saisir() {
-	// TODO - implement EtatRobot::saisir
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::saisir() {
+	throw RobotExceptions::Saisir_Exception();
 }
 
-EtatRobot EtatRobot::poser() {
-	// TODO - implement EtatRobot::poser
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::poser() {
+	throw RobotExceptions::Poser_Exception();
 }
 
-EtatRobot EtatRobot::peser() {
-	// TODO - implement EtatRobot::peser
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::peser() {
+	throw RobotExceptions::Peser_Exception();
 }
 
-EtatRobot EtatRobot::rencontrerPlot() {
-	// TODO - implement EtatRobot::rencontrerPlot
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::rencontrerPlot() {
+	throw RobotExceptions::RencontrerPlot_Exception();
 }
 
-EtatRobot EtatRobot::evaluerPlot() {
-	// TODO - implement EtatRobot::evaluerPlot
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::evaluerPlot() {
+	throw RobotExceptions::EvaluerPlot_Exception();
 }
 
-EtatRobot EtatRobot::figer() {
-	// TODO - implement EtatRobot::figer
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::figer() {
+	throw RobotExceptions::Figer_Exception();
 }
 
-EtatRobot EtatRobot::repartir() {
-	// TODO - implement EtatRobot::repartir
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::repartir() {
+	throw RobotExceptions::Repartir_Exception();
 }
 
-String EtatRobot::getNom() {
-	// TODO - implement EtatRobot::getNom
-	throw "Not yet implemented";
+EtatRobot* EtatRobot::getPremier() {
+	return premierEtat;
+}
+
+String getNomEtat(){
+	return "aucun état";
+}
+
+ostream& operator<<(ostream& o, const EtatRobot& e) {
+	return o << "pas censé être appelé"<< endl;
 }
