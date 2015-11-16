@@ -5,7 +5,7 @@
 using namespace std;
 #include "EtatEnRoute.h"
 
-class EtatAVideFacePlot : EtatEnRoute {
+class EtatAVideFacePlot : public EtatEnRoute {
 
 private:
 	static EtatAVideFacePlot* inst;
@@ -19,7 +19,7 @@ public:
 
 	string getNom();
 
-	EtatAVideFacePlot* getSingleton();
+	static EtatAVideFacePlot* getSingleton();
 };
 
 #endif

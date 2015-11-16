@@ -1,11 +1,3 @@
-#=======================================================================
-# Programme pour le cours UML, StatePattern, Singleton et Observer Observable
-#-----------------------------------------------------------------------
-# Forquet Vincent - Robin Gregory
-#=======================================================================
-
-#CXXFLAGS=-Wall
-
 sources = main.cpp Robot.cpp Position.cpp Plot.cpp Objet.cpp EtatRobot.cpp EtatFige.cpp EtatEnRoute.cpp EtatEnChargeFacePlot.cpp EtatEnCharge.cpp EtatAVideFacePlot.cpp EtatAVide.cpp Afficheur.cpp
 objets = $(sources:.cpp=.o)
 

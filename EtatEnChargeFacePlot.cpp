@@ -2,7 +2,7 @@
 #include "EtatAVideFacePlot.h"
 #include "EtatEnCharge.h"
 
-EtatEnChargeFacePlot* EtatEnChargeFacePlot::inst = new EtatEnChargeFacePlot;s
+EtatEnChargeFacePlot* EtatEnChargeFacePlot::inst = new EtatEnChargeFacePlot;
 
 EtatRobot* EtatEnChargeFacePlot::tourner() {
 	return EtatEnCharge::getSingleton();

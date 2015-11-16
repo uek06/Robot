@@ -32,8 +32,6 @@ public:
 
 	string getNom();
 
-	string getNomEtat();
-
 	static EtatRobot* getPremier();
 
 	friend ostream& operator<<(ostream&, const EtatRobot&);

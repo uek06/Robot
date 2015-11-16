@@ -21,7 +21,7 @@ private:
 	vector<Afficheur*> afficheurs;
 
 public:
-	Robot(int x=0,int y=0, Plot p=Plot(0),Objet o=Objet(0),char d = 'S', EtatRobot* e = EtatRobot::getPremier(),Afficheur* a = NULL):
+	Robot(int x=0,int y=0, Plot p=Plot(0),Objet o=Objet(0),char d = 'N', EtatRobot* e = EtatRobot::getPremier(),Afficheur* a = NULL):
 		position(Position(x,y)),
 		plot(p),
 		etat(e),

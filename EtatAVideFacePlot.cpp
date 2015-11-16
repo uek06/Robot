@@ -16,7 +16,7 @@ EtatRobot* EtatAVideFacePlot::evaluerPlot() {
 	return this;
 }
 
-String EtatAVideFacePlot::getNom() {
+string EtatAVideFacePlot::getNom() {
 	return "Etat à vide face à un plot";
 }
 

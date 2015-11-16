@@ -19,7 +19,7 @@ public:
 
 	string getNom();
 
-	EtatFige* getSingleton();
+	static EtatFige* getSingleton();
 };
 
 #endif

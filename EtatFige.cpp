@@ -2,11 +2,11 @@
 
 EtatFige* EtatFige::inst = new EtatFige;
 
-EtatRobot EtatFige::repartir() {
+EtatRobot* EtatFige::repartir() {
 	return reinterpret_cast<EtatRobot*>(etatPrecedent);
 }
 
-String EtatFige::getNom() {
+string EtatFige::getNom() {
 	return "Etat figé";
 }
 

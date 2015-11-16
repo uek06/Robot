@@ -4,7 +4,7 @@
 #include "EtatEnRoute.h"
 using namespace std;
 
-class EtatEnCharge : EtatEnRoute {
+class EtatEnCharge : public EtatEnRoute {
 private:
 	static EtatEnCharge* inst;
 
@@ -15,9 +15,9 @@ public:
 
 	EtatRobot* rencontrerPlot();
 
-	String getNom();
+	string getNom();
 
-	EtatEnCharge* getSingleton();
+	static EtatEnCharge* getSingleton();
 };
 
 #endif

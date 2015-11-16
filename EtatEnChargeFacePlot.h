@@ -4,9 +4,10 @@
 #include "EtatEnRoute.h"
 using namespace std;
 
-class EtatEnChargeFacePlot : EtatEnRoute {
+class EtatEnChargeFacePlot : public EtatEnRoute {
 
-private EtatEnChargeFacePlot* inst;
+private :
+	static EtatEnChargeFacePlot* inst;
 
 public:
 	EtatRobot* tourner();
@@ -17,7 +18,7 @@ public:
 
 	string getNom();
 
-	EtatEnChargeFacePlot* getSingleton();
+	static EtatEnChargeFacePlot* getSingleton();
 };
 
 #endif

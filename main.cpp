@@ -13,10 +13,12 @@ int main(){
 	Robot rob;
 	Plot p(10);
 	Objet o(5);
+	EtatRobot e;
 
 	//Mise en place de l'afficheur
-	Afficheur* affi1 = new Afficheur();
-	rob.addObserver(affi1);
+	Afficheur affi1;
+	affi1.setObservable(&rob);
+	rob.addObserver(&affi1);
 
 	//Test AVide sans changement d'Etat
 	rob.avancer(1);
