@@ -10,53 +10,48 @@ using namespace std;
 
 int main(){
 	//création du robot
-	Robot rob;
+	Robot robot;
+	//création du plot
 	Plot p(10);
-	Objet o(5);
+	//cration de l'objet
+	Objet o(20);
+	//création de l'état
 	EtatRobot e;
+	//création de l'afficheur
+	Afficheur afficheur;
+	afficheur.setObservable(&robot);
+	robot.addObserver(&afficheur);
 
-	//Mise en place de l'afficheur
-	Afficheur affi1;
-	affi1.setObservable(&rob);
-	rob.addObserver(&affi1);
+	//à vide
+	robot.avancer(5);
+	robot.tourner('N');
+	robot.peser();
+	//à vide face plot
+	robot.rencontrerPlot(p);
+	robot.evaluerPlot();
+	//à vide
+	robot.tourner('S');
+	//à vide face plot
+	robot.rencontrerPlot(p);
+	//en charge face plot
+	robot.saisir(o);
+	robot.poser();
+	robot.saisir(o);
+	//figé
+	robot.figer();
+	robot.repartir();
+	//en charge
+	robot.tourner('E');
+	robot.rencontrerPlot(p);
+	robot.tourner('O');
+	robot.avancer(5);
+	robot.tourner('N');
+	robot.peser();
+	robot.avancer(10);
+	robot.repartir();
+	//en charge face plot
+	robot.evaluerPlot();
+	robot.peser();
 
-	//Test AVide sans changement d'Etat
-	rob.avancer(1);
-	rob.tourner('S');
-	//Test AVide fonction impossible
-	rob.peser();
-	//Test AVide -> aVideFacePlot
-	rob.rencontrerPlot(p);
-	//Test AVideFacePlot
-	rob.evaluerPlot();
-	//Test AVideFacePlot -> AVide
-	rob.tourner('N');
-	rob.rencontrerPlot(p);
-	//Test AVideFacePLot <-> EnChargeFacePlot
-	rob.saisir(o);
-	rob.poser();
-	rob.saisir(o);
-	//test Figer 1
-	rob.figer();
-	rob.repartir();
-	//Test EnChargeFacePlot
-	rob.evaluerPlot();
-	rob.peser();
-	//Test EnChargeFacePlot <-> EnCharge
-	rob.tourner('O');
-	rob.rencontrerPlot(p);
-	rob.tourner('E');
-	//Test EnCharge
-	rob.avancer(9);
-	rob.tourner('S');
-	rob.peser();
-	//Test figer 2
-	rob.figer();
-	rob.avancer(10);
-	rob.repartir();
-
-	//rob.detacher(affi1);
-	//Ne doit pas s'afficher
-	rob.tourner('S');
 	return 0;
 }
