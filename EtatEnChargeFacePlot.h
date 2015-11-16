@@ -16,7 +16,7 @@ public:
 
 	EtatRobot* poser();
 
-	string getNom();
+	virtual string getNom();
 
 	static EtatEnChargeFacePlot* getSingleton();
 };

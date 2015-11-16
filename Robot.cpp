@@ -1,6 +1,8 @@
 #include "Robot.h"
 #include "RobotExceptions.h"
 
+int Robot::OBS_MAX = 1;
+
 void Robot::avancer(int n) {
 	try{
 		etat->avancer();
@@ -38,7 +40,7 @@ void Robot::avancer(int n) {
 
 void Robot::tourner(char dir) {
 	try{
-		etat =etat->tourner();
+		etat = etat->tourner();
 		direction = dir;
 		plot = Plot(0);
 		notify();
@@ -124,11 +126,16 @@ void Robot::repartir() {
 }
 
 void Robot::notify() {
-	for(int i=0; i<afficheurs.size();i++){
-		afficheurs[i]->update(this);
+	for(int i=0; i<OBS_MAX;i++){
+		if(afficheurs[i]!=NULL)
+			afficheurs[i]->update(this);
 	}
 }
 
 void Robot::addObserver(Afficheur* a) {
-	afficheurs[afficheurs.size()]=a;
+	for(int i=0; i<OBS_MAX;i++){
+		if(afficheurs[i]==NULL)
+			afficheurs[i]=a;
+			return;
+	}
 }

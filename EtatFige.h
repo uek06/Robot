@@ -17,7 +17,7 @@ public:
 
 	void setEtatPrecedent(EtatEnRoute*);
 
-	string getNom();
+	virtual string getNom();
 
 	static EtatFige* getSingleton();
 };

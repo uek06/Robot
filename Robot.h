@@ -13,6 +13,7 @@ using namespace std;
 class Robot {
 
 private:
+	static int OBS_MAX;
 	Objet objet;
 	Position position;
 	Plot plot;
