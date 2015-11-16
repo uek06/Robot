@@ -4,7 +4,7 @@
 void Robot::avancer(int n) {
 	try{
 		etat->avancer();
-		if(n<0) throw Mauvaise_Direction_Exception();
+		if(n<0) throw RobotExceptions::Mauvaise_Direction_Exception();
 		else{
 			switch(direction){
 				case 'N': {
@@ -41,7 +41,7 @@ void Robot::tourner(char dir) {
 		etat =etat->tourner();
 		direction = dir;
 		plot = Plot(0);
-		notify;
+		notify();
 	}
 	catch(RobotExceptions::Tourner_Exception& e){
 		cerr << "Impossible de tourner" << endl;
@@ -63,7 +63,7 @@ void Robot::poser() {
 	try{
 		etat = etat->poser();
 		objet = Objet(0);
-		notify;
+		notify();
 	}
 	catch(RobotExceptions::Poser_Exception& e){
 		cerr << "Impossible de poser" << endl;

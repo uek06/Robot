@@ -7,7 +7,7 @@ using namespace std;
 #include "Objet.h"
 #include "EtatRobot.h"
 #include "Afficheur.h"
-//#include "EtatAVide.h"
+#include "EtatAVide.h"
 #include <vector>
 
 class Robot {

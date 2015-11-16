@@ -4,6 +4,8 @@
 class RobotExceptions{
 public:
 
+	class Mauvaise_Direction_Exception{
+	};
 	class Avancer_Exception {
 	};
 	class Tourner_Exception {

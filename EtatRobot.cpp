@@ -40,12 +40,12 @@ EtatRobot* EtatRobot::repartir() {
 	throw RobotExceptions::Repartir_Exception();
 }
 
-EtatRobot* EtatRobot::getPremier() {
+static EtatRobot* EtatRobot::getPremier() {
 	premierEtat = EtatAVide::getSingleton();
 	return premierEtat;
 }
 
-String EtatRobot::getNomEtat(){
+string EtatRobot::getNomEtat(){
 	return "aucun état";
 }
 

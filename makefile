@@ -1,67 +1,50 @@
-CC = g++
+#=======================================================================
+# Programme pour le cours UML, StatePattern, Singleton et Observer Observable
+#-----------------------------------------------------------------------
+# Forquet Vincent - Robin Gregory
+#=======================================================================
 
-option = -g -W -Wall -std=c++11 
+#CXXFLAGS=-Wall
 
-OBJ_FICHIER = main.o Robot.o EtatRobot.o EtatFige.o EtatEnRoute.o Objet.o Position.o Plot.o Afficheur.o EtatEnCharge.o EtatEnChargeFacePlot.o EtatAVideFacePlot.o EtatAVide.o
+sources = main.cpp Robot.cpp Position.cpp Plot.cpp Objet.cpp EtatRobot.cpp EtatFige.cpp EtatEnRoute.cpp EtatEnChargeFacePlot.cpp EtatEnCharge.cpp EtatAVideFacePlot.cpp EtatAVide.cpp Afficheur.cpp
+objets = $(sources:.cpp=.o)
 
-EXE = main
 
-all: $(EXE)
-	
-#Exécutable
-executionRobot: $(OBJ_FICHIER)
-	$(CC) $(option) -o $(EXE) $(OBJ_FICHIER)
-#Main
-main.o: main.cpp 
-	$(CC) $(option) -c main.cpp -o main.o
 
-#Classe EtatRobot
-EtatRobot.o: EtatRobot.h EtatRobot.cpp
-	$(CC) $(option) -c EtatRobot.cpp -o EtatRobot.o
+%: %.o
+		$(LINK.cpp) -o $@ $^
 
-#Classe EtatFige
-EtatFige.o: EtatFige.h EtatFige.cpp
-	$(CC) $(option) -c EtatFige.cpp -o EtatFige.o
 
-#Classe EtatEnRoute
-EtatEnRoute.o: EtatEnRoute.h EtatEnRoute.cpp
-	$(CC) $(option) -c EtatEnRoute.cpp -o EtatEnRoute.o
+robot : $(objets)
+		g++ -o $@ $^
+		rm -f *.o
 
-#Classe EtatAVide
-EtatAVide.o: EtatAVide.h EtatAVide.cpp
-	$(CC) $(option) -c EtatAVide.cpp -o EtatAVide.o
+###
 
-#Classe EtatAVideFacePlot
-EtatAVideFacePlot.o: EtatAVideFacePlot.h EtatAVideFacePlot.cpp
-	$(CC) $(option) -c EtatAVideFacePlot.cpp -o EtatAVideFacePlot.o
+clean:
+		 rm -f *~ *.o *.bak
 
-#Classe EtatEnCharge
-EtatEnCharge.o: EtatEnCharge.h EtatEnCharge.cpp
-	$(CC) $(option) -c EtatEnCharge.cpp -o EtatEnCharge.o
+depend:
+		makedepend $(sources)
 
-#Classe EtatEnChargeFacePlot
-EtatEnChargeFacePlot.o: EtatEnChargeFacePlot.h EtatEnChargeFacePlot.cpp
-	$(CC) $(option) -c EtatEnChargeFacePlot.cpp -o EtatEnChargeFacePlot.o
 
-#Classe Robot
-Robot.o: Robot.h Robot.cpp
-	$(CC) $(option) -c Robot.cpp -o Robot.o
+# DO NOT DELETE
 
-#Classe Objet
-Objet.o: Objet.h Objet.cpp
-	$(CC) $(option) -c Objet.cpp -o Objet.o
-	
-#Classe Position
-Position.o: Position.h Position.cpp
-	$(CC) $(option) -c Position.cpp -o Position.o
-
-#Classe Plot
-Plot.o: Plot.h Plot.cpp
-	$(CC) $(option) -c Plot.cpp -o Plot.o
-
-#Classe Afficheur
-Afficheur.o : Afficheur.h Afficheur.cpp
-	$(CC) $(option) -c Afficheur.cpp -o Afficheur.o
-
-clean: 
-	rm -vf *.o main
+main.o: Robot.h Afficheur.h EtatRobot.h Plot.h Position.h Objet.h
+main.o: EtatAVide.h EtatEnRoute.h EtatFige.h
+Robot.o: Robot.h Afficheur.h EtatRobot.h Plot.h Position.h Objet.h
+Robot.o: EtatAVide.h EtatEnRoute.h EtatFige.h
+Position.o: Position.h
+Plot.o: Plot.h
+Objet.o: Objet.h
+EtatRobot.o: EtatRobot.h EtatAVide.h EtatEnRoute.h EtatFige.h
+EtatFige.o: EtatFige.h EtatRobot.h EtatAVide.h EtatEnRoute.h
+EtatEnRoute.o: EtatEnRoute.h EtatRobot.h EtatFige.h
+EtatEnChargeFacePlot.o: EtatEnChargeFacePlot.h EtatEnRoute.h EtatRobot.h
+EtatEnChargeFacePlot.o: EtatFige.h EtatEnCharge.h EtatAVideFacePlot.h
+EtatEnCharge.o: EtatEnCharge.h EtatEnRoute.h EtatRobot.h EtatFige.h
+EtatEnCharge.o: EtatEnChargeFacePlot.h
+EtatAVideFacePlot.o: EtatAVideFacePlot.h EtatEnRoute.h EtatRobot.h EtatFige.h
+EtatAVideFacePlot.o: EtatAVide.h EtatEnChargeFacePlot.h
+EtatAVide.o: EtatAVide.h EtatEnRoute.h EtatRobot.h EtatFige.h
+EtatAVide.o: EtatAVideFacePlot.h

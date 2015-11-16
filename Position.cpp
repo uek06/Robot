@@ -17,5 +17,5 @@ void Position::setY(int y) {
 }
 
 ostream& operator<<(ostream& os, Position& pos){
-	return os << "Position: (" << pos.x << ";" << pos.y << ")" << endl;
+	return os << "Position: (" << pos.getX() << ";" << pos.getY() << ")" << endl;
 }

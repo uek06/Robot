@@ -1,6 +1,6 @@
 #include "Plot.h"
 
-void Plot::getHauteur() {
+int Plot::getHauteur() {
 	return this->hauteur;
 }
 
