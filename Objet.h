@@ -3,7 +3,7 @@
 
 #include <string>
 #include <ostream>
-using namespace std
+using namespace std;
 
 class Objet {
 

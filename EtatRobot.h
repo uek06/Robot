@@ -30,9 +30,11 @@ public:
 
 	EtatRobot* repartir();
 
-	String getNom();
+	string getNom();
 
-	EtatRobot* getPremier();
+	string getNomEtat();
+
+	static EtatRobot* getPremier();
 
 	friend ostream& operator<<(ostream&, const EtatRobot&);
 };

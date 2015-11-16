@@ -5,7 +5,7 @@
 
 class EtatFige;
 
-class EtatEnRoute : EtatRobot {
+class EtatEnRoute : public EtatRobot {
 
 public:
 	EtatRobot* figer();

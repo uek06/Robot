@@ -6,7 +6,7 @@ class EtatEnRoute;
 using namespace std;
 
 
-class EtatFige : EtatRobot {
+class EtatFige : public EtatRobot {
 
 private:
 	EtatEnRoute* etatPrecedent;
@@ -17,7 +17,9 @@ public:
 
 	void setEtatPrecedent(EtatEnRoute*);
 
-	String getNom();
+	string getNom();
 
 	EtatFige* getSingleton();
 };
+
+#endif

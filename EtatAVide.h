@@ -15,7 +15,7 @@ public:
 
 	EtatRobot* rencontrerPlot();
 
-	String getNom();
+	string getNom();
 
 	EtatAVide* getSingleton();
 };

@@ -11,7 +11,7 @@ EtatRobot* EtatAVide::rencontrerPlot() {
 	return EtatAVideFacePlot::getSingleton();
 }
 
-String EtatAVide::getNom() {
+string EtatAVide::getNom() {
 	return "Etat à vide";
 }
 

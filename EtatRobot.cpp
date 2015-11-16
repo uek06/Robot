@@ -2,7 +2,7 @@
 #include "RobotExceptions.h"
 #include "EtatAVide.h"
 
-EtatRobot* EtatRobot::premierEtat = EtatAVide::getSingleton();
+EtatRobot* EtatRobot::premierEtat;
 
 EtatRobot* EtatRobot::avancer() {
 	throw RobotExceptions::Avancer_Exception();
@@ -41,10 +41,11 @@ EtatRobot* EtatRobot::repartir() {
 }
 
 EtatRobot* EtatRobot::getPremier() {
+	premierEtat = EtatAVide::getSingleton();
 	return premierEtat;
 }
 
-String getNomEtat(){
+String EtatRobot::getNomEtat(){
 	return "aucun état";
 }
 

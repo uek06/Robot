@@ -16,11 +16,11 @@ void Afficheur::display() {
 	}
 }
 
-void Afficheur::update(Robot r) {
+void Afficheur::update(Robot* r) {
 	this->obs=r;
 	display();
 }
 
-void Afficheur::setObservable(Robot r) {
+void Afficheur::setObservable(Robot* r) {
 	this->obs = r;
 }

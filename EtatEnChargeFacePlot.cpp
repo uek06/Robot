@@ -16,7 +16,7 @@ EtatRobot* EtatEnChargeFacePlot::poser() {
 	return EtatAVideFacePlot::getSingleton();
 }
 
-String EtatEnChargeFacePlot::getNom() {
+string EtatEnChargeFacePlot::getNom() {
 	return "Etat en charge face à un plot";
 }
 

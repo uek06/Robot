@@ -17,7 +17,7 @@ public:
 
 	EtatRobot* evaluerPlot();
 
-	String getNom();
+	string getNom();
 
 	EtatAVideFacePlot* getSingleton();
 };
