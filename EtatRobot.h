@@ -35,6 +35,8 @@ public:
 	static EtatRobot* getPremier();
 
 	friend ostream& operator<<(ostream&, const EtatRobot&);
+
+	class Wrong_State{};
 };
 
 #endif
