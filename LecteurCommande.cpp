@@ -1,6 +1,10 @@
-#include "..\..\Documents\VPProjects\LecteurCommande.h"
+#include "LecteurCommande.h"
+#include "Robot.h"
+
+static vector<string> liste {"FIGER","REPARTIR","AVANCER","TOURNER","RENCONTRERPLOT","EVALUERPLOT","SAISIR","PESER","POSER"};
 
 void LecteurCommande::readCommande() {
-	// TODO - implement LecteurCommande::readCommande
-	throw "Not yet implemented";
+	cout << "------SIMULATION------" << endl;
+	for(iterator cmd;)
 }
+

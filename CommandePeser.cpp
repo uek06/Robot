@@ -1,4 +1,4 @@
-#include "..\..\Documents\VPProjects\CommandePeser.h"
+#include "CommandePeser.h"
 
 void CommandePeser::execute() {
 	// TODO - implement CommandePeser::execute

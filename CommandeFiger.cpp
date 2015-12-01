@@ -1,4 +1,4 @@
-#include "..\..\Documents\VPProjects\CommandeFiger.h"
+#include "CommandeFiger.h"
 
 void CommandeFiger::execute() {
 	// TODO - implement CommandeFiger::execute

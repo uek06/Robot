@@ -1,6 +1,14 @@
+#ifndef _INVOCATEUR_H_
+#define _INVOCATEUR_H_
+
+#include "Commande.h"
+
 class LecteurCommande {
 
 
 public:
-	void readCommande();
+	void readCommand(Robot *r);
+
 };
+
+#endif

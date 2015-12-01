@@ -1,6 +1,10 @@
+#ifndef _COMMANDE_ROBOT_H_
+#define _COMMANDE_ROBOT_H_
+
 class CommandeRobot : Commande {
 
-
 public:
-	void execute();
+	virtual void execute();
 };
+
+#endif

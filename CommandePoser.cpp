@@ -1,4 +1,4 @@
-#include "..\..\Documents\VPProjects\CommandePoser.h"
+#include "CommandePoser.h"
 
 void CommandePoser::execute() {
 	// TODO - implement CommandePoser::execute
