@@ -1,6 +1,17 @@
 #include "CommandePoser.h"
 
 void CommandePoser::execute() {
-	// TODO - implement CommandePoser::execute
-	throw "Not yet implemented";
+	this->obj = this->robot->getObjet();
+	robot->poser();
+}
+
+void CommandePoser::desexecute(){
+	this->robot->saisir(this->obj);
+	pile().pop();
+}
+
+Commande* constructeurVirtuel(LecteurCommande* lc){
+	Commande* cmd= new CommandePoser(robot,lc);
+	pile().push(cmd);
+	return cmd;
 }

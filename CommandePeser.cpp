@@ -1,6 +1,13 @@
 #include "CommandePeser.h"
 
 void CommandePeser::execute() {
-	// TODO - implement CommandePeser::execute
-	throw "Not yet implemented";
+	robot->peser();
+}
+
+void CommandePeser::desexecute(){
+
+}
+
+Commande* constructeurVirtuel(LecteurCommande* lc){
+	return new CommandePeser(robot,lc);
 }

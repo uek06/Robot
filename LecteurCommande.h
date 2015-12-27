@@ -5,10 +5,8 @@
 
 class LecteurCommande {
 
+private:
+	Robot* r;
 
 public:
-	void readCommand(Robot *r);
-
-};
-
-#endif
+	LecteurCommande(Robot

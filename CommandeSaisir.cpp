@@ -1,6 +1,18 @@
-#include "..\..\Documents\VPProjects\CommandeSaisir.h"
+#include "CommandeSaisir.h"
 
 void CommandeSaisir::execute() {
-	// TODO - implement CommandeSaisir::execute
-	throw "Not yet implemented";
+	int p = lc->getInt("Poids de l'objet à saisir ?");
+	Objet obj(p);
+	robot->saisir(obj);
+}
+
+void CommandeSaisir::desexecute(){
+	robot->poser();
+	pile().pop();
+}
+
+Commande* CommandeSaisir::constructeurVirtuel(LecteurCommande* lect){
+	Commande* cmd = new CommandeSaisir(robot,lect);
+	pile().push(cmd);
+	return cmd;
 }

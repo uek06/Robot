@@ -17,14 +17,12 @@ public:
 	}
 
 
-
+	virtual bool isCancellable();
 	virtual void execute();
-	//virtual void desexecuter();
+	virtual void desexecute();
 
 	static Commande* newCommande(string s, Robot* r, LecteurCommande* lc);
 	virtual Commande* constructeurVirtuel(Robot* r, LecteurCommande* lc;
-
-	void execute();
 };
 
 #endif
