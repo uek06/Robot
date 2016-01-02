@@ -1,6 +1,10 @@
 #ifndef _COMMANDE_H_
 #define _COMMANDE_H_
 
+#include "Robot.h"
+#include <map>
+#include <stack>
+
 class LecteurCommande;
 class Commande {
 
@@ -22,7 +26,7 @@ public:
 	virtual void desexecute();
 
 	static Commande* newCommande(string s, Robot* r, LecteurCommande* lc);
-	virtual Commande* constructeurVirtuel(Robot* r, LecteurCommande* lc;
+	virtual Commande* constructeurVirtuel(Robot* r, LecteurCommande* lc);
 };
 
 #endif

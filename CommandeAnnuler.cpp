@@ -1,4 +1,5 @@
 #include "CommandeAnnuler.h"
+#include "LecteurCommande.h"
 
 CommandeAnnuler* CommandeAnnuler::instance = new CommandeAnnuler;
 
@@ -12,7 +13,7 @@ void CommandeAnnuler::execute(){
     } 
 }
 
-void CommandeAnnuler::desexecuter(){
+void CommandeAnnuler::desexecute(){
 	
 }
 

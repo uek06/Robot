@@ -7,8 +7,9 @@
 
 #include "CommandeRobot.h"
 
-using namespace std;
 
+using namespace std;
+class LecteurCommande;
 class CommandeAvancer : public CommandeRobot {
 
 private:
@@ -21,8 +22,8 @@ public:
     CommandeAvancer(Robot* r = nullptr, LecteurCommande * lect = nullptr):CommandeRobot("AVANCER"){
     	robot = r;
     	lc = lect;
-    	x = r->getPosition().getX();
-		y = r->getPosition().getY();
+    	x = r->getPosition()->getX();
+		y = r->getPosition()->getY();
     }
 
     
